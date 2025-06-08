@@ -55,11 +55,11 @@ This project implements a data engineering pipeline for customer sales analysis 
 
 ### Prerequisites
 
-- Python 3.8+
-- [MySQL](https://www.mysql.com/)
-- [AWS Account](https://aws.amazon.com/)
-- [Java](https://www.java.com/) (for Spark)
-- [Apache Spark](https://spark.apache.org/)
+- Python
+- [MySQL]
+- [AWS Account]
+- [Java] (for Spark)
+- [Apache Spark]
 - AWS credentials with S3 access
 
 ### Installation
@@ -119,11 +119,3 @@ See [`docs/database_schema.drawio.png`](docs/database_schema.drawio.png) for the
 - Check logs for errors in the output or log files.
 - Ensure AWS credentials and MySQL access are correct.
 - For Spark issues, verify your Java and Spark installations.
-
-## License
-
-This project is for educational purposes. See [LICENSE](LICENSE) for details.
-
----
-
-For more details and video walkthroughs, visit [YouTube Channel](https://www.youtube.com/channel/UCacvJAgrPTjSEdnZObMzpqQ).
