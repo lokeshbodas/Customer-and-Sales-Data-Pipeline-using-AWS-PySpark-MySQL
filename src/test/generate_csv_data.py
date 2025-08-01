@@ -21,8 +21,8 @@ sales_persons = {
     123: [7, 8, 9]
 }
 
-start_date = datetime(2025, 1, 1)
-end_date = datetime(2025, 4, 20)
+start_date = datetime(2024, 2, 1)
+end_date = datetime(2024, 8, 20)
 
 file_location = "/path/to/spark_data"
 csv_file_path = os.path.join(file_location, "sales_data.csv")
