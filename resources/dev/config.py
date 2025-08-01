@@ -1,7 +1,7 @@
 import os
 
 key = "sales_project"
-iv = "sales_encyptyo"
+iv = "sales_encryption"
 salt = "sales_AesEncryption"
 
 #AWS Access And Secret key
