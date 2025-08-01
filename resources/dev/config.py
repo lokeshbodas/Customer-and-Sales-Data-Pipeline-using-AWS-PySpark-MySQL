@@ -42,8 +42,8 @@ sales_team_data_mart_table = "sales_team_data_mart"
 mandatory_columns = ["customer_id","store_id","product_name","sales_date","sales_person_id","price","quantity","total_cost"]
 
 # File Download location
-local_directory = "/path/to/local/data"
-customer_data_mart_local_file = "/path/to/customer_data_mart"
-sales_team_data_mart_local_file = "/path/to/sales_team_data_mart"
-sales_team_data_mart_partitioned_local_file = "/path/to/sales_partition_data"
-error_folder_path_local = "/path/to/error_files"
+local_directory = "/path/to/local/data/file_from_s3"
+customer_data_mart_local_file = "/path/to/local/data/customer_data_mart"
+sales_team_data_mart_local_file = "/path/to/local/data/sales_team_data_mart"
+sales_team_data_mart_partitioned_local_file = "/path/to/local/data/sales_partition_data"
+error_folder_path_local = "/path/to/local/data/error_files"
