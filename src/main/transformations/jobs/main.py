@@ -1,3 +1,9 @@
+import os, sys
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), r"C:\VS Code\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main"))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
 import datetime
 import shutil
 from resources.dev import config
@@ -18,7 +24,7 @@ from src.main.read.database_read import DatabaseReader
 aws_access_key = config.aws_access_key
 aws_secret_key = config.aws_secret_key
 
-s3_client_provider = S3ClientProvider(decrypt(aws_access_key), decrypt(aws_secret_key))
+s3_client_provider = S3ClientProvider(aws_access_key, aws_secret_key)
 s3_client = s3_client_provider.get_client()
 
 response = s3_client.list_buckets()
@@ -30,8 +36,13 @@ logger.info("List of Buckets: %s", response['Buckets'])
 #Check if local directory has already a file
 #If file exists, check if the same file is present in the staging area with status as 'A'. If so, then don't delete and try to re-run.
 #Else give an error and not process the next file.
+if os.path.isdir(config.local_directory):
+    csv_files = [file for file in os.listdir(config.local_directory) if file.endswith('.csv')]
+else:
+    print(f"Directory {config.local_directory} does not exist.")
+    csv_files = []
+logger.info("CSV files in local directory: %s", csv_files)
 
-csv_files = [file for file in os.listdir(config.local_directory) if file.endswith('.csv')]
 connection = get_mysql_connection()
 cursor = connection.cursor()
 
@@ -307,5 +318,6 @@ if correct_files:
 else:
     logger.info("There are no files to process. Please check the error logs.")
     raise Exception("There is no data available with correct files")
+
 
 input("Press Enter to exit...")
