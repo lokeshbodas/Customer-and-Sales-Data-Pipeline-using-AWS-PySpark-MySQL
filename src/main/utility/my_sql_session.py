@@ -1,11 +1,17 @@
-import mysql.connector
+import os, sys
 
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "C:\VS Code\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main"))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+import mysql.connector
+from resources.dev import config
 def get_mysql_connection():
     connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="password",
-        database="sales_pipeline"
+        host=config.db_host,
+        user=config.db_user,
+        password=config.db_password,
+        database=config.db_name
     )
     return connection
 
