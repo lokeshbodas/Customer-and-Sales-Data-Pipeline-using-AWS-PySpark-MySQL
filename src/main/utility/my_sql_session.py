@@ -5,7 +5,7 @@ def get_mysql_connection():
         host="localhost",
         user="root",
         password="password",
-        database="manish"
+        database="sales_pipeline"
     )
     return connection
 
