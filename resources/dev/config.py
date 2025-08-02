@@ -9,6 +9,12 @@ aws_access_key = "your_encrypted_access_key"
 aws_secret_key = "your_encrypted_secret_key"
 bucket_name = "customer-sales-analysis"
 
+# MySQL database connection properties
+db_host="localhost"
+db_user="root"
+db_password="PASSWORD"
+db_name="sales_pipeline"
+
 # S3 bucket and directory details
 s3_customer_datamart_directory = "customer_data_mart"
 s3_sales_datamart_directory = "sales_data_mart"
@@ -42,8 +48,8 @@ sales_team_data_mart_table = "sales_team_data_mart"
 mandatory_columns = ["customer_id","store_id","product_name","sales_date","sales_person_id","price","quantity","total_cost"]
 
 # File Download location
-local_directory = "/path/to/local/data/file_from_s3"
-customer_data_mart_local_file = "/path/to/local/data/customer_data_mart"
-sales_team_data_mart_local_file = "/path/to/local/data/sales_team_data_mart"
-sales_team_data_mart_partitioned_local_file = "/path/to/local/data/sales_partition_data"
-error_folder_path_local = "/path/to/local/data/error_files"
+local_directory = "C:\\VS Code\\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main\\Data\\file_from_s3"
+customer_data_mart_local_file = "C:\\VS Code\\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main\\Data\\customer_data_mart"
+sales_team_data_mart_local_file = "C:\\VS Code\\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main\\Data\\sales_team_data_mart"
+sales_team_data_mart_partitioned_local_file = "C:\\VS Code\\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main\\Data\\sales_partition_data"
+error_folder_path_local = "C:\\VS Code\\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main\\Data\\error_files"
