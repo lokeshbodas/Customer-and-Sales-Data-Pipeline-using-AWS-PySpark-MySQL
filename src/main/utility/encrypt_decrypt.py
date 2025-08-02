@@ -1,7 +1,10 @@
 import base64
 from Cryptodome.Cipher import AES
 from Cryptodome.Protocol.KDF import PBKDF2
+
 import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "C:\\VS Code\\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main")))
+
 from resources.dev import config
 # from logging_config import logger
 
