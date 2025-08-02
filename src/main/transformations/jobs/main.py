@@ -40,8 +40,6 @@ if os.path.isdir(config.local_directory):
     csv_files = [file for file in os.listdir(config.local_directory) if file.endswith('.csv')]
 else:
     print(f"Directory {config.local_directory} does not exist.")
-    csv_files = []
-logger.info("CSV files in local directory: %s", csv_files)
 
 connection = get_mysql_connection()
 cursor = connection.cursor()
@@ -321,3 +319,4 @@ else:
 
 
 input("Press Enter to exit...")
+
