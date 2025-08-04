@@ -25,11 +25,11 @@ s3_processed_directory = "sales_data_processed/"
 
 #Database credential
 # MySQL database connection properties
-database_name = "customer_sales_analysis"
-url = f"jdbc:mysql://localhost:3306/{database_name}"
+database_name = "sales_pipeline"
+url = f"jdbc:mysql://localhost:3306/{db_name}"
 properties = {
     "user": "root",
-    "password": "password",
+    "password": "PASSWORD",
     "driver": "com.mysql.cj.jdbc.Driver"
 }
 
