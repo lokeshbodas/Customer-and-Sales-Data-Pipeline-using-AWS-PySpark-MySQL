@@ -23,7 +23,7 @@ sales_persons = {
 }
 
 
-file_location = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data"
+file_location = "C:\\VS Code\\Customer-and-Sales-Data-Pipeline-using-AWS-PySpark-MySQL-main\\Data"
 
 if not os.path.exists(file_location):
     os.makedirs(file_location)
